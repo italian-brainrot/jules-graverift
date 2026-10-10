@@ -1,0 +1,20 @@
+{
+  "grave_rift_open": {
+    "category": "ambient",
+    "sounds": [
+      "minecraft:portal/portal"
+    ]
+  },
+  "grave_rift_hum": {
+    "category": "ambient",
+    "sounds": [
+      "minecraft:portal/travel"
+    ]
+  },
+  "grave_rift_close": {
+    "category": "ambient",
+    "sounds": [
+      "minecraft:block/respawn_anchor/deplete"
+    ]
+  }
+}
