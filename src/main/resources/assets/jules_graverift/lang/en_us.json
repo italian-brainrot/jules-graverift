@@ -1,0 +1,8 @@
+{
+  "itemGroup.jules_graverift": "Jules Grave Rift",
+  "item.jules_graverift.pierced_enderpearl": "Pierced Ender Pearl",
+  "item.jules_graverift.pierced_enderpearl.desc": "A cold weight. It remembers what you lost, but cannot yet open the way.",
+  "item.jules_graverift.grave_rift": "Grave Rift",
+  "item.jules_graverift.grave_rift.desc": "Use on a living creature to tear open a path to your last place of death. The path will not remain open for long.",
+  "message.jules_graverift.no_death_location": "The rift searches, but finds no record of your death..."
+}

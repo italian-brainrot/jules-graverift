@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "jules_graverift:pierced_enderpearl"
+  },
+  "result": {
+    "id": "jules_graverift:grave_rift"
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}
