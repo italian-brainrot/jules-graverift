@@ -37,7 +37,7 @@ public class GraveRiftItem extends Item {
             }
 
             // Apply Hunger effect level 15 (amplifier 14) for 1 minute (1200 ticks)
-            player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 1200, 14, false, true));
+            player.addEffect(new MobEffectInstance(MobEffects.HUNGER, 1200, 30, false, true));
 
             // Consume item unless creative mode
             if (!player.getAbilities().instabuild) {
