@@ -143,8 +143,10 @@ public class GraveRiftEntity extends Entity {
         for (UUID uuid : enteredPlayerUUIDs) {
             ServerPlayer player = serverLevel.getServer().getPlayerList().getPlayer(uuid);
             if (player != null && player.isAlive()) {
-                // Apply 10 seconds (200 ticks) of Nausea 1 (amplifier 0)
-                player.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0, false, true));
+                // Cover the remaining lifetime plus a one-second buffer so the warning is still
+                // ticking when the rift collapses (expireRift clears it on arrival).
+                int remaining = MAX_LIFETIME - lifetime;
+                player.addEffect(new MobEffectInstance(MobEffects.CONFUSION, remaining + 20, 0, false, true));
             }
         }
     }
@@ -163,6 +165,9 @@ public class GraveRiftEntity extends Entity {
 
                 // Teleport back
                 player.teleportTo(targetLevel, returnEntry.returnX, returnEntry.returnY, returnEntry.returnZ, returnEntry.returnYRot, returnEntry.returnXRot);
+
+                // End the Nausea warning exactly when the player is pulled back.
+                player.removeEffect(MobEffects.CONFUSION);
 
                 // Set food level to 0
                 player.getFoodData().setFoodLevel(0);

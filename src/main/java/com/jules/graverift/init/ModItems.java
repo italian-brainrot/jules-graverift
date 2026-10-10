@@ -17,7 +17,7 @@ public class ModItems {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, GraveRiftMod.MODID);
 
     public static final DeferredItem<Item> PIERCED_ENDERPEARL = ITEMS.register("pierced_enderpearl",
-            () -> new PiercedEnderpearlItem(new Item.Properties().stacksTo(16)));
+            () -> new PiercedEnderpearlItem(new Item.Properties().stacksTo(1)));
 
     public static final DeferredItem<Item> GRAVE_RIFT = ITEMS.register("grave_rift",
             () -> new GraveRiftItem(new Item.Properties().stacksTo(1)));
